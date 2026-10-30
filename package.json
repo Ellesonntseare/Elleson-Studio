@@ -1,0 +1,89 @@
+{
+  "name": "elleson-studio",
+  "version": "0.5.0",
+  "description": "Elleson Studio desktop animation editor",
+  "main": "desktop/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "preview": "node preview.cjs",
+    "test": "node tests/integration.cjs",
+    "pack": "electron-builder --win --dir",
+    "build": "node desktop/build.cjs"
+  },
+  "keywords": [],
+  "author": "Elleson Studio",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "electron": "^45.1.0",
+    "electron-builder": "^26.18.0"
+  },
+  "private": true,
+  "build": {
+    "appId": "studio.elleson.editor",
+    "productName": "Elleson Studio",
+    "electronDist": "node_modules/electron/dist",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "desktop/main.cjs",
+      "desktop/preload.cjs",
+      "desktop/assets/**/*",
+      "server-api.cjs",
+      "package.json",
+      "desktop/frame-export.cjs",
+      "elevenlabs-api.cjs"
+    ],
+    "extraResources": [
+      {
+        "from": "desktop/tools/ffmpeg.exe",
+        "to": "tools/ffmpeg.exe"
+      },
+      {
+        "from": "desktop/tools/FFMPEG-NOTICE.md",
+        "to": "tools/FFMPEG-NOTICE.md"
+      },
+      {
+        "from": "desktop-runtime/speech",
+        "to": "speech",
+        "filter": [
+          "**/*",
+          "!**/__pycache__/**",
+          "!**/*.pyc",
+          "!**/*.parts/**",
+          "!**/*.download"
+        ]
+      },
+      {
+        "from": "dist/checklist.json",
+        "to": "checklist.json"
+      },
+      {
+        "from": "RELEASE-NOTES.md",
+        "to": "RELEASE-NOTES.md"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "desktop/assets/studio.ico",
+      "signAndEditExecutable": true
+    },
+    "portable": {
+      "artifactName": "Elleson-Studio-Portable-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "artifactName": "Elleson-Studio-Setup-${version}.${ext}"
+    }
+  }
+}

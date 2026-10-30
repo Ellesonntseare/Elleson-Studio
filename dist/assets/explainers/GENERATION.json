@@ -1,0 +1,26 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-10-30",
+  "assets": [
+    {
+      "id": "clay-laptop",
+      "prompt": "Use case: stylized-concept. Asset type: reusable transparent explainer-video object. Create ONE beautifully crafted soft 3D clay-style open laptop, three-quarter front view, complete object centered with generous clear padding. Matte lavender casing, dark screen showing a simple abstract rising teal chart without text, gently rounded keys, believable smooth material, soft studio highlights and ambient occlusion within the object. High-end animated explainer illustration, clean readable silhouette at small sizes, subtle depth, no person, no extra props, no ground plane, no cast floor shadow, no labels, no letters, no logo, no watermark. True transparent background, not a checkerboard drawing. Square composition, large detailed object.",
+      "file": "clay-laptop.png"
+    },
+    {
+      "id": "realistic-laptop",
+      "prompt": "Asset type: reusable explainer-video object. Subject: ONE a premium unbranded silver aluminum open laptop, three-quarter front view, believable keyboard, dark reflective screen with a simple teal bar chart and no text. Style: Photorealistic premium studio product photograph, believable material texture, accurate proportions and detailed natural reflections. Isolated complete object centered in a square image with generous clear padding. Soft professional studio illumination, clear silhouette. True transparent background. No other props, person, labels, logos, watermark, ground plane or floor shadow.",
+      "file": "realistic-laptop.png"
+    },
+    {
+      "id": "clay-phone",
+      "prompt": "Asset type: reusable explainer-video object. Subject: ONE a soft 3D clay-style upright smartphone, matte lavender frame and teal screen with a simple rounded message bubble, three-quarter view. Style: High-end soft 3D explainer illustration, beautifully rounded matte surfaces and soft sculptural details. Isolated complete object centered in a square image with generous clear padding. Soft professional studio illumination, clear silhouette. True transparent background. No other props, person, labels, logos, watermark, ground plane or floor shadow.",
+      "file": "clay-phone.png"
+    },
+    {
+      "id": "realistic-phone",
+      "prompt": "Asset type: reusable explainer-video object. Subject: ONE a premium unbranded modern upright smartphone, satin graphite frame, glass screen showing a simple teal rounded message bubble without text, three-quarter view. Style: Photorealistic premium studio product photograph, believable material texture, accurate proportions and detailed natural reflections. Isolated complete object centered in a square image with generous clear padding. Soft professional studio illumination, clear silhouette. True transparent background. No other props, person, labels, logos, watermark, ground plane or floor shadow.",
+      "file": "realistic-phone.png"
+    }
+  ]
+}

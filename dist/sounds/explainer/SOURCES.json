@@ -1,0 +1,141 @@
+{
+  "retrieved": "2026-10-30",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "id": "whoosh",
+      "name": "Short air swipe",
+      "author": "1bob",
+      "category": "Whooshes",
+      "file": "whoosh.wav",
+      "url": "https://remotion.media/whoosh.wav",
+      "sourceUrl": "https://freesound.org/s/831936/",
+      "licenseEvidence": "https://www.remotion.dev/docs/sfx/whoosh",
+      "sha256": "d98f010fa5f03fd3f4f77418f8ba6a962d36e63357265772771c4ac69c1a63a7",
+      "bytes": 13620
+    },
+    {
+      "id": "whip",
+      "name": "Natural whip transition",
+      "author": "JW_Audio",
+      "category": "Whooshes",
+      "file": "whip.wav",
+      "url": "https://remotion.media/whip.wav",
+      "sourceUrl": "https://freesound.org/s/838766/",
+      "licenseEvidence": "https://www.remotion.dev/docs/sfx/whip",
+      "sha256": "8713e68578c7f579bdfc24ff77fd3e3eefc1a9b5d1232a63c10800b81d0ead5f",
+      "bytes": 66732
+    },
+    {
+      "id": "shutter-modern",
+      "name": "Camera shutter",
+      "author": "ristooooo1",
+      "category": "Foley",
+      "file": "shutter-modern.wav",
+      "url": "https://remotion.media/shutter-modern.wav",
+      "sourceUrl": "https://freesound.org/s/539136/",
+      "licenseEvidence": "https://www.remotion.dev/docs/sfx/shutter-modern",
+      "sha256": "e9edb88765451ff07b247a22582f83048af5c260533d8b2e43613f45a3d1a898",
+      "bytes": 43224
+    },
+    {
+      "id": "mouse-click",
+      "name": "Mouse click",
+      "author": "Pixeliota",
+      "category": "Foley",
+      "file": "mouse-click.wav",
+      "url": "https://remotion.media/mouse-click.wav",
+      "sourceUrl": "https://freesound.org/s/678248/",
+      "licenseEvidence": "https://www.remotion.dev/docs/sfx/mouse-click",
+      "sha256": "887a9259203cafa24ad90274029d574ba29438bcdc87e6f384e4472f85736348",
+      "bytes": 70110
+    },
+    {
+      "id": "cinematic-812636",
+      "name": "Cinematic airy sweep",
+      "author": "AudioPapkin",
+      "category": "Whooshes",
+      "file": "cinematic-812636.mp3",
+      "url": "https://cdn.freesound.org/previews/812/812636_8698658-hq.mp3",
+      "sourceUrl": "https://freesound.org/people/AudioPapkin/sounds/812636/",
+      "formatNote": "Public high-quality MP3 preview; original 96 kHz WAV requires an account.",
+      "sha256": "de1cf27c37a7a1770674221ccf8494142a6b976a60564b28bdbb31b460040ac1",
+      "bytes": 116496
+    },
+    {
+      "id": "cinematic-812637",
+      "name": "Cinematic textured sweep",
+      "author": "AudioPapkin",
+      "category": "Whooshes",
+      "file": "cinematic-812637.mp3",
+      "url": "https://cdn.freesound.org/previews/812/812637_8698658-hq.mp3",
+      "sourceUrl": "https://freesound.org/people/AudioPapkin/sounds/812637/",
+      "formatNote": "Public high-quality MP3 preview; original 96 kHz WAV requires an account.",
+      "sha256": "df97fbed5e2a688fb12a1e1f98a1aa5663f31cf744443e35cd8ab2ed01d748e9",
+      "bytes": 111720
+    },
+    {
+      "id": "cinematic-812688",
+      "name": "Cinematic quick whoosh",
+      "author": "AudioPapkin",
+      "category": "Whooshes",
+      "file": "cinematic-812688.mp3",
+      "url": "https://cdn.freesound.org/previews/812/812688_8698658-hq.mp3",
+      "sourceUrl": "https://freesound.org/people/AudioPapkin/sounds/812688/",
+      "formatNote": "Public high-quality MP3 preview; original 96 kHz WAV requires an account.",
+      "sha256": "8cc6c110249c245f46a83ae283e7a54b3dedfe6b6fb969e12dad1aed002fcd25",
+      "bytes": 38160
+    },
+    {
+      "id": "page-turn",
+      "name": "Paper page turn",
+      "author": "gfrog",
+      "category": "Foley",
+      "file": "page-turn.mp3",
+      "url": "https://cdn.freesound.org/previews/144/144110_401105-hq.mp3",
+      "sourceUrl": "https://freesound.org/people/gfrog/sounds/144110/",
+      "sha256": "857f4adfb48e6738f1bea8a8e806e582b9a5289ad8a27ae2e1377541845861dd",
+      "bytes": 43488
+    },
+    {
+      "id": "short-video-impact-01",
+      "name": "Soft transition impact",
+      "category": "Impacts",
+      "author": "SFXMint",
+      "file": "short-video-impact-01.wav",
+      "url": "https://sfxmint.com/dl/short-video-impact-01.wav",
+      "sourceUrl": "https://sfxmint.com/sounds/short-video-impact-01",
+      "hash": "93c6c045d3f1d527d9025dc1d8c19491fe5ab4ca5fcab9ccb185f11e6875c289",
+      "licenseEvidence": "https://sfxmint.com/license",
+      "sha256": "93c6c045d3f1d527d9025dc1d8c19491fe5ab4ca5fcab9ccb185f11e6875c289",
+      "bytes": 114738
+    },
+    {
+      "id": "short-video-ding-01",
+      "name": "Clean notification ding",
+      "category": "Notifications",
+      "author": "SFXMint",
+      "file": "short-video-ding-01.wav",
+      "url": "https://sfxmint.com/dl/short-video-ding-01.wav",
+      "sourceUrl": "https://sfxmint.com/sounds/short-video-ding-01",
+      "hash": "72bc5964dce1ddcd8c738c816bf566c1b61ce6f91491412602ff94d0c2f5c07a",
+      "licenseEvidence": "https://sfxmint.com/license",
+      "sha256": "72bc5964dce1ddcd8c738c816bf566c1b61ce6f91491412602ff94d0c2f5c07a",
+      "bytes": 104490
+    },
+    {
+      "id": "transition-riser-01",
+      "name": "Short cinematic riser",
+      "category": "Risers",
+      "author": "SFXMint",
+      "file": "transition-riser-01.wav",
+      "url": "https://sfxmint.com/dl/transition-riser-01.wav",
+      "sourceUrl": "https://sfxmint.com/sounds/transition-riser-01",
+      "hash": "d9b77a06e8f011caeace75abe5638d28164695b7ae5f58109291e942bed57f32",
+      "licenseEvidence": "https://sfxmint.com/license",
+      "sha256": "d9b77a06e8f011caeace75abe5638d28164695b7ae5f58109291e942bed57f32",
+      "bytes": 352878
+    }
+  ],
+  "unavailable": []
+}

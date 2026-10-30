@@ -1,0 +1,2 @@
+const path=require('node:path'),fetchFile=require('./fetch-file.cjs');
+(async()=>{for(const name of ['ctranslate2','av','onnxruntime']){const metadata=await(await fetch('https://pypi.org/pypi/'+name+'/json')).json();const file=metadata.urls.find(f=>f.filename.includes('cp312')&&f.filename.includes('win_amd64'));if(!file)throw Error('No Python 3.12 wheel for '+name);await fetchFile(file.url,path.join(__dirname,'wheels',file.filename),file.digests.sha256)}})().catch(e=>{console.error(e);process.exitCode=1});

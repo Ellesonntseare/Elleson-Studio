@@ -1,0 +1,2 @@
+const path=require('node:path'),fetchFile=require('./fetch-file.cjs');
+(async()=>{const repo='Systran/faster-whisper-tiny',items=await(await fetch('https://huggingface.co/api/models/'+repo+'/tree/main')).json();for(const name of ['config.json','tokenizer.json','vocabulary.txt','model.bin']){const item=items.find(i=>i.path===name);if(!item)throw Error('Missing model file '+name);await fetchFile('https://huggingface.co/'+repo+'/resolve/main/'+name,path.join(__dirname,'models/tiny',name),item.lfs?.oid)}})().catch(e=>{console.error(e);process.exitCode=1});

@@ -1,0 +1,482 @@
+[
+  {
+    "done": true,
+    "text": "Professional dark workspace and multitrack editing"
+  },
+  {
+    "done": true,
+    "text": "124 local CC0 effects: 11 explainer essentials plus 113 legacy game/UI sounds, with preview and favorites"
+  },
+  {
+    "done": true,
+    "text": "Draggable audio fades, trimming, splitting and mixed export"
+  },
+  {
+    "done": true,
+    "text": "1 · Character loops, blinking, head/hand actions and timed expressions"
+  },
+  {
+    "done": true,
+    "text": "2 · Real local speech captions, word timing and phonetic mouth animation"
+  },
+  {
+    "done": true,
+    "text": "3 · Ease-in/out, bounce, hold and draggable custom animation curves"
+  },
+  {
+    "done": true,
+    "text": "4 · Typewriter, animated titles and spoken-word caption highlighting"
+  },
+  {
+    "done": true,
+    "text": "6 · Saved scene/project sequences with their media and audio"
+  },
+  {
+    "done": true,
+    "text": "7 · Speed-adjusted footage/audio, reversal, freeze frames, crop and masks"
+  },
+  {
+    "done": true,
+    "text": "8 · Recovery history, interrupted-session notice and media health controls"
+  },
+  {
+    "done": true,
+    "text": "Regression, persistence and real-time video export tests passed"
+  },
+  {
+    "done": true,
+    "text": "Windows desktop app · Version 0.4.0 packaged editor, offline tools and native video exports verified"
+  },
+  {
+    "done": false,
+    "text": "Future: automatic image rigging, advanced effect automation and cross-device sync"
+  },
+  {
+    "done": true,
+    "text": "Canvas expansion · Expanded character builder and scene-instance updates"
+  },
+  {
+    "done": true,
+    "text": "Canvas expansion · Direct hand, elbow, knee, foot and head posing"
+  },
+  {
+    "done": true,
+    "text": "Canvas expansion · Multiple selection, marquee, groups, scale, rotation and locks"
+  },
+  {
+    "done": true,
+    "text": "Canvas expansion · Layer and camera motion paths"
+  },
+  {
+    "done": true,
+    "text": "Canvas expansion · Crossfade, slide, zoom and matching-object transitions"
+  },
+  {
+    "done": true,
+    "text": "Canvas expansion · Editable chart, comparison, timeline, map, callout and lower-third templates"
+  },
+  {
+    "done": true,
+    "text": "Canvas expansion · Storyboard previews, scene reordering and script notes"
+  },
+  {
+    "done": true,
+    "text": "Editing expansion · Ripple trimming and deletion with later clips following within the scene"
+  },
+  {
+    "done": true,
+    "text": "Editing expansion · Audio beat detection, draggable markers and clip snapping"
+  },
+  {
+    "done": true,
+    "text": "Editing expansion · Previous/next onion skin poses with frame and opacity controls"
+  },
+  {
+    "done": true,
+    "text": "Editing expansion · Speech-aware music ducking shared by preview and export"
+  },
+  {
+    "done": true,
+    "text": "Editing expansion · Per-property animation graphs, keyframe editing and custom tangents"
+  },
+  {
+    "done": true,
+    "text": "Creative expansion · Image/video color key with sampling, edge softness and spill cleanup"
+  },
+  {
+    "done": true,
+    "text": "Creative expansion · Measured audio peak normalization shared by playback and export"
+  },
+  {
+    "done": true,
+    "text": "Creative expansion · Reusable text styles with fonts, alignment, outlines, shadows and background cards"
+  },
+  {
+    "done": true,
+    "text": "Creative expansion · Prominent video upload button and canvas drag-and-drop with original audio"
+  },
+  {
+    "done": true,
+    "text": "Creative expansion · Six between-clip transitions, timeline badges and built-in visual effects library"
+  },
+  {
+    "done": true,
+    "text": "Animation workflow · Landscape, vertical and square canvas formats with matching exports"
+  },
+  {
+    "done": true,
+    "text": "Animation workflow · Persistent project export queue with format settings and desktop output folder"
+  },
+  {
+    "done": true,
+    "text": "Animation workflow · Frame-by-frame drawing, duplicate frames, onion skins, holds and playback"
+  },
+  {
+    "done": true,
+    "text": "Animation workflow · Click-to-walk and drag-and-drop timed character actions"
+  },
+  {
+    "done": true,
+    "text": "Animation workflow · Visual pose presets, saved poses and look/point targets"
+  },
+  {
+    "done": true,
+    "text": "Animation workflow · Import photos or generated pictures, polygon-cut parts, set pivots and parent joints"
+  },
+  {
+    "done": true,
+    "text": "Animation workflow · Direct joint posing and reusable imported character rigs"
+  },
+  {
+    "done": true,
+    "text": "Animation workflow · Click a stock or imported character, choose its audio and generate local phonetic lip-sync"
+  },
+  {
+    "done": true,
+    "text": "Animation workflow · Head-attached mouth area and optional custom mouth artwork"
+  },
+  {
+    "done": true,
+    "text": "Realistic animation · Local person background removal, edge removal and erase/restore cut-out brushes"
+  },
+  {
+    "done": true,
+    "text": "Realistic animation · Textured mesh bending around imported character joints"
+  },
+  {
+    "done": true,
+    "text": "Realistic animation · Drag hands and feet with connected limb solving and foot pins"
+  },
+  {
+    "done": true,
+    "text": "Realistic animation · Head-attached eye/eyebrow artwork, blinking and keyed facial expressions"
+  },
+  {
+    "done": true,
+    "text": "Realistic animation · Record mouse movements as editable animation keyframes"
+  },
+  {
+    "done": true,
+    "text": "Realistic animation · Adjustable blending between timed character actions"
+  },
+  {
+    "done": true,
+    "text": "Storytelling · Scene-linked script editor, speaker assignment, voice import and script text export"
+  },
+  {
+    "done": true,
+    "text": "Storytelling · Conversation timing with pauses, overlaps, per-line phonetic lip-sync and timeline tracks"
+  },
+  {
+    "done": true,
+    "text": "Storytelling · Establishing, medium, close-up, two-person and over-the-shoulder camera shots"
+  },
+  {
+    "done": true,
+    "text": "Storytelling · Timed character emotions and listener reactions linked to dialogue"
+  },
+  {
+    "done": true,
+    "text": "Storytelling · Minimal workspace with four primary tools and expandable advanced controls"
+  },
+  {
+    "done": true,
+    "text": "Storytelling · Offline character voices and a separate narrator, mixed with timeline music"
+  },
+  {
+    "done": true,
+    "text": "Storytelling · Automatic jointed walking with planted steps, arm swing and elbow movement"
+  },
+  {
+    "done": true,
+    "text": "Storytelling · Independent hands/arms, legs and head keyframes, blending and gesture presets"
+  },
+  {
+    "done": true,
+    "text": "Storytelling · Explainer object browser: 24 editable vector illustrations and four transparent clay/realistic cut-outs"
+  },
+  {
+    "done": true,
+    "text": "Storytelling · New default collection of 11 explainer sound effects; legacy sounds separately available"
+  },
+  {
+    "done": true,
+    "text": "Production · Character–object pickup, carrying, handover and pointing"
+  },
+  {
+    "done": true,
+    "text": "Production · Reviewable script-to-storyboard scene suggestions"
+  },
+  {
+    "done": true,
+    "text": "Production · Keyframed object parts: lids, screens, clock hands and chart bars"
+  },
+  {
+    "done": true,
+    "text": "Production · Eight offline voice profiles and delivery controls, with samples"
+  },
+  {
+    "done": true,
+    "text": "Production · Scene continuity for character poses, appearance and held objects"
+  },
+  {
+    "done": true,
+    "text": "Animation ease · Guided picture-rig setup"
+  },
+  {
+    "done": true,
+    "text": "Animation ease · Front, side and back character artwork"
+  },
+  {
+    "done": true,
+    "text": "Animation ease · Reusable motion clips"
+  },
+  {
+    "done": true,
+    "text": "Animation ease · Motion cleanup and foot-plant correction"
+  },
+  {
+    "done": true,
+    "text": "Animation ease · Comparable saved voice takes"
+  },
+  {
+    "done": true,
+    "text": "Animation ease · Storyboard rehearsal with dialogue and notes"
+  },
+  {
+    "done": true,
+    "text": "Text · Direct canvas wording edits with font, style, animation and timing preserved"
+  },
+  {
+    "done": true,
+    "text": "Text upgrade · Mixed formatting inside one text layer"
+  },
+  {
+    "done": true,
+    "text": "Text upgrade · Resizable text boxes with automatic wrapping"
+  },
+  {
+    "done": true,
+    "text": "Text upgrade · Text labels attached to moving objects"
+  },
+  {
+    "done": true,
+    "text": "Text upgrade · Per-word timing and animation controls"
+  },
+  {
+    "done": true,
+    "text": "Text upgrade · Project-wide text find and replace"
+  },
+  {
+    "done": true,
+    "text": "Next 1 · Joint angle limits and snapping guides"
+  },
+  {
+    "done": true,
+    "text": "Next 2 · Cut-out edge feathering and overlap previews"
+  },
+  {
+    "done": true,
+    "text": "Next 3 · Walking stride matched to distance and speed"
+  },
+  {
+    "done": true,
+    "text": "Next 4 · Reusable open, pointing and gripping hand poses"
+  },
+  {
+    "done": true,
+    "text": "Next 5 · Editable lip-sync cues and mouth strength"
+  },
+  {
+    "done": true,
+    "text": "Next 6 · Smooth expression blending"
+  },
+  {
+    "done": true,
+    "text": "Next 7 · Eye/head look anticipation and adjustable motion"
+  },
+  {
+    "done": true,
+    "text": "Next 8 · Saved grips for recurring objects"
+  },
+  {
+    "done": true,
+    "text": "Next 9 · Timing curves for object-part animation"
+  },
+  {
+    "done": true,
+    "text": "Next 10 · Looping transition adjustment preview"
+  },
+  {
+    "done": true,
+    "text": "Next 12 · Phrase pauses and emphasis for voice delivery"
+  },
+  {
+    "done": true,
+    "text": "Next 13 · Per-line music ducking"
+  },
+  {
+    "done": true,
+    "text": "Next 14 · Curved audio fades and crossfades"
+  },
+  {
+    "done": true,
+    "text": "Next 15 · Previewed multi-clip trimming"
+  },
+  {
+    "done": true,
+    "text": "Next 16 · Multiple-key selection, copy/paste and shifting"
+  },
+  {
+    "done": true,
+    "text": "Next 17 · Camera-follow dead zone and smoothing"
+  },
+  {
+    "done": true,
+    "text": "Next 19 · Storyboard checks for voice, mouth setup and timing"
+  },
+  {
+    "done": true,
+    "text": "Next 20 · Selected-scene and time-range export"
+  },
+  {
+    "done": true,
+    "text": "Next · Speed controls for preview, animation, walking and lip-sync"
+  },
+  {
+    "done": true,
+    "text": "Verify actual 1080p HD and 4K output dimensions"
+  },
+  {
+    "done": true,
+    "text": "Export MP4, WebM, MOV and silent GIF with matching file contents and extensions"
+  },
+  {
+    "done": true,
+    "text": "Next · Project board: In progress, Unpublished, Finished and safe project switching"
+  },
+  {
+    "done": true,
+    "text": "Delivery · Final integration and export regressions"
+  },
+  {
+    "done": true,
+    "text": "Delivery · Prepare independent speech runtime"
+  },
+  {
+    "done": true,
+    "text": "Delivery · Build Windows 0.5.0 installer"
+  },
+  {
+    "done": true,
+    "text": "Delivery · Verify packaged app and installer archive"
+  },
+  {
+    "done": true,
+    "text": "Delivery · Back up saved projects and install update"
+  },
+  {
+    "done": true,
+    "text": "Delivery · Open installed app and deliver installer"
+  },
+  {
+    "done": true,
+    "text": "Usability 1 · Clear selection status and explanations for unavailable controls"
+  },
+  {
+    "done": true,
+    "text": "Usability 2 · Character workspace: Add, Appearance, Animate and Voice"
+  },
+  {
+    "done": true,
+    "text": "Usability 3 · Visible canvas handles and selection toolbar"
+  },
+  {
+    "done": true,
+    "text": "Usability 4 · Drop images, video and audio onto canvas or timeline"
+  },
+  {
+    "done": true,
+    "text": "Usability 5 · Playhead-centred zoom, project fit and scene navigation"
+  },
+  {
+    "done": true,
+    "text": "Usability 6 · Drag walking destinations and edit paths directly"
+  },
+  {
+    "done": true,
+    "text": "Usability 7 · One-panel character audio, lip-sync generation and preview"
+  },
+  {
+    "done": true,
+    "text": "Usability 8 · Combined reusable character performances"
+  },
+  {
+    "done": true,
+    "text": "Usability 9 · Preview quality controls and bounded playback cache"
+  },
+  {
+    "done": true,
+    "text": "Usability 10 · Export dimensions, format, frame rate and estimated size"
+  },
+  {
+    "text": "Voice update · Direct Voice-over, natural presets and remembered pronunciation/settings",
+    "done": true
+  },
+  {
+    "text": "Voice update · Long scripts, continuous scene placement, cancellation and Download WAV",
+    "done": true
+  },
+  {
+    "text": "Voice update · Actual Michael/Emma synthesis and audible 1080p export in isolated source app",
+    "done": true
+  },
+  {
+    "text": "Voice update · Optional ElevenLabs connection and private key handling",
+    "done": true
+  },
+  {
+    "text": "Voice update · Installed-app verification",
+    "done": true
+  },
+  {
+    "text": "Explainer · Editable picture scenes, existing ElevenLabs audio and timed captions in Studio",
+    "done": true
+  },
+  {
+    "text": "Scene editing · Bottom-strip adjacent copy and continued background/end pose",
+    "done": true
+  },
+  {
+    "text": "Walking · Knees aligned with stepping feet and long continuous walks",
+    "done": true
+  },
+  {
+    "text": "Timeline editing · Direct clip menu, Delete key, copy/paste, duplicate, split and keyboard shortcut cards",
+    "done": true
+  },
+  {
+    "text": "Continuous editing · All-scene asset tracks, scene-boundary transition controls and direct per-character voice creation",
+    "done": true
+  }
+]

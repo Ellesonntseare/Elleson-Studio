@@ -1,0 +1,4 @@
+// Functional checks can reveal the same progressive-disclosure controls used in the UI.
+async function reveal(page,selector){const target=typeof selector==='string'?page.locator(selector):selector;if(!await target.count())throw Error('Missing UI control: '+selector);if(!await target.first().isVisible()){const section=await target.first().evaluate(e=>e.closest('[data-character-panel]')?.dataset.characterPanel);if(section)await page.locator('[data-character-section="'+section+'"]').click();const inMenu=await target.first().evaluate(e=>!!e.closest('#studioMoreTools'));if(inMenu)await page.locator('#studioMoreTools>summary').click();await target.first().evaluate(e=>{for(let p=e.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true})}return target}
+async function clickTool(page,id){const target=await reveal(page,'#'+id);await target.click()}
+module.exports={reveal,clickTool};

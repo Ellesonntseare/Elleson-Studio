@@ -1,0 +1,90 @@
+{
+  "python": "C:/Path/To/Python/python.exe",
+  "tts": {
+    "engine": "piper",
+    "version": "1.8.0",
+    "model": "models/tts/en_GB-vctk-medium.onnx",
+    "voices": [
+      {
+        "id": "vctk-p225",
+        "name": "English voice A",
+        "speaker": 107,
+        "language": "en-GB"
+      },
+      {
+        "id": "vctk-p226",
+        "name": "English voice B",
+        "speaker": 95,
+        "language": "en-GB"
+      },
+      {
+        "id": "vctk-p228",
+        "name": "English voice C",
+        "speaker": 90,
+        "language": "en-GB"
+      },
+      {
+        "id": "vctk-p229",
+        "name": "English voice D",
+        "speaker": 85,
+        "language": "en-GB"
+      }
+    ]
+  },
+  "kokoro": {
+    "version": "1.0",
+    "model": "models/kokoro/kokoro-v1.0.onnx",
+    "styles": "models/kokoro/voices-v1.0.bin",
+    "voices": [
+      {
+        "id": "kokoro-af_heart",
+        "name": "Kokoro · Heart · US",
+        "speaker": "af_heart",
+        "language": "en-us",
+        "engine": "kokoro"
+      },
+      {
+        "id": "kokoro-af_bella",
+        "name": "Kokoro · Bella · US",
+        "speaker": "af_bella",
+        "language": "en-us",
+        "engine": "kokoro"
+      },
+      {
+        "id": "kokoro-am_fenrir",
+        "name": "Kokoro · Fenrir · US",
+        "speaker": "am_fenrir",
+        "language": "en-us",
+        "engine": "kokoro"
+      },
+      {
+        "id": "kokoro-bm_george",
+        "name": "Kokoro · George · UK",
+        "speaker": "bm_george",
+        "language": "en-gb",
+        "engine": "kokoro"
+      },
+      {
+        "id": "kokoro-am_michael",
+        "name": "Kokoro · Michael · US",
+        "speaker": "am_michael",
+        "language": "en-us",
+        "engine": "kokoro"
+      },
+      {
+        "id": "kokoro-af_nicole",
+        "name": "Kokoro · Nicole · US",
+        "speaker": "af_nicole",
+        "language": "en-us",
+        "engine": "kokoro"
+      },
+      {
+        "id": "kokoro-bf_emma",
+        "name": "Kokoro · Emma · UK",
+        "speaker": "bf_emma",
+        "language": "en-gb",
+        "engine": "kokoro"
+      }
+    ]
+  }
+}
