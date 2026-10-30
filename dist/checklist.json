@@ -478,5 +478,9 @@
   {
     "text": "Continuous editing · All-scene asset tracks, scene-boundary transition controls and direct per-character voice creation",
     "done": true
+  },
+  {
+    "text": "Timeline refinement · Stable all-scene asset rows, same-row splits, left/right trim, direct mouse drag and per-character text entry",
+    "done": true
   }
 ]
