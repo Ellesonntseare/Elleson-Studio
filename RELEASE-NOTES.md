@@ -93,3 +93,5 @@ Scene joins now have a visible transition button and duration controls. Visual a
 
 ## Timeline trimming and character text speech
 Split visual/audio segments retain their original timeline row. Wider left/right handles trim in place; Trim left/right buttons trim at the playhead. Full-length visual clips can move later by extending the current scene up to its 60-second limit, with Undo. All scene assets now render in stable scene order independently of selection; extra action rows have a Show action tracks toggle. Character Voice panels accept typed dialogue directly and pass it to voice generation with the selected speaker.
+
+Timeline clip edges now extend outward as well as trim inward. Extending a visual clip beyond the current scene grows it up to 60 seconds while preserving later scene audio and marker alignment. Right-edge video/audio extension respects available source media; starts stop at project/scene zero. Locked layers remain fixed, and extension supports Undo/Redo and stays on its original row.

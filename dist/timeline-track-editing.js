@@ -29,10 +29,23 @@ for(const [id,label,shape]of [
  ['timelineTrimRight','Trim right of playhead','<path d="M13 3v18M16 7h5M16 17h5M18 10l-3 2 3 2M9 7H3v10h6"/>']
 ]){const button=$(id);button.classList.add('timeline-trim-icon');button.title=label;button.setAttribute('aria-label',label);button.innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+shape+'</svg>';trimIconGroup.append(button)}
 sameTrackStyle.textContent+='.timeline-trim-icons{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}.timeline-top .timeline-trim-icon{display:inline-flex;align-items:center;justify-content:center;width:33px;height:29px;padding:4px!important}.timeline-trim-icon svg{pointer-events:none}';
-// A full-length asset can be dragged later without silently refusing the move.
+function makeTimelineSceneRoom(s,requestedEnd){
+ const needed=Math.min(60,Math.ceil(requestedEnd*20)/20);if(needed<=s.duration)return;
+ const anchors=sceneAudioAnchors(),oldEnd=project.scenes.slice(0,project.scenes.indexOf(s)+1).reduce((n,s)=>n+s.duration,0),added=needed-s.duration;
+ s.duration=needed;placeSceneAudio(anchors);for(const m of project.markers||[])if(m.time>=oldEnd)m.time+=added;
+}
+// Dragging an end outward also grows the scene when more room is needed.
 const moveBeforeTimelineRoom=moveVisual;moveVisual=function(o,change){
- if(change.mode==='move'&&!o.locked&&change.delta>0){const end=clipEnd(o),needed=Math.min(60,Math.ceil((end+change.delta)*20)/20);if(needed>current().duration){const anchors=sceneAudioAnchors(),oldEnd=sceneOffset()+current().duration,added=needed-current().duration;o.out=end;current().duration=needed;placeSceneAudio(anchors);for(const m of project.markers||[])if(m.time>=oldEnd)m.time+=added}}
+ if(!o.locked&&change.delta>0&&(change.mode==='move'||change.mode==='right'&&!editOptions().ripple)){
+  const end=clipEnd(o),sourceEnd=o.type==='video'?clipStart(o)+(o.sourceDuration-o.sourceOffset)/(o.speed||1):60,requested=change.mode==='right'?Math.min(end+change.delta,sourceEnd):end+change.delta;
+  if(requested>current().duration){o.out=end;makeTimelineSceneRoom(current(),requested)}
+ }
  return moveBeforeTimelineRoom(o,change);
 };
+const audioBeforeTimelineRoom=moveAudio;moveAudio=function(c,change){
+ if(change.mode==='right'&&change.delta>0&&!c.locked&&!c.videoId&&!editOptions().ripple){const source=audioBuffers.get(c.id)?.duration??c.sourceDuration,requested=Math.min(audioEnd(c)+change.delta,c.start+(source-c.offset)/(c.rate||1));if(requested>totalDuration()){const last=project.scenes.at(-1),offset=totalDuration()-last.duration;makeTimelineSceneRoom(last,requested-offset)}}
+ return audioBeforeTimelineRoom(c,change);
+};
+const clipBeforeExtendHints=makeClip;makeClip=function(area,options){const el=clipBeforeExtendHints(area,options);if(options.onmove&&!options.locked){for(const edge of el.querySelectorAll('.clip-edge')){edge.title=edge.dataset.edge==='left'?'Drag left to extend the start · drag right to trim':'Drag right to extend the end · drag left to trim';edge.setAttribute('aria-label',edge.title)}}return el};
 const validatorBeforeTrackIds=valid;valid=function(p){return validatorBeforeTrackIds(p)&&[...p.scenes.flatMap(s=>s.objects),...(p.audioClips||[])].every(c=>c.timelineTrackId===undefined||typeof c.timelineTrackId==='string'&&c.timelineTrackId.length<=160)};
 renderTimeline();
