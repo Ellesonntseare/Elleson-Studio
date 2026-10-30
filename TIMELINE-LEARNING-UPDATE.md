@@ -1,6 +1,6 @@
 # Timeline and learning update
 
-Prepared in an isolated working copy based on commit `dbe656c`. Applying this patch and updating the installed application are separate steps. The main checkout and installed application were not changed by this work.
+Originally prepared and tested in an isolated copy based on `dbe656c`. Integrated into main on 31 October following the user’s explicit installation request. The installed application is verified separately using the local update manifest.
 
 ## Features
 
@@ -29,4 +29,4 @@ These are focused checks for this batch, not a rerun of every historical test.
 - Clips with prop interactions, following labels, or unsupported non-character paths are blocked from direct transfer so linked objects do not silently break. Use scene continuation for those cases.
 - Repeating a non-walking movement repeats its original cycle. A full-clip walk continues travel; it can leave the visible canvas if extended far enough.
 - I/O marks and the highlighted range are editing selections, not saved project content.
-- This batch has not been merged into the main checkout, pushed to GitHub, or installed in the user's app. Apply and review it through the main Studio work before updating the installed application.
+- Tests support `--installed` to verify the actual application in a separate profile. User projects and keys remain outside the repository. Installation records live in the local update workspace.

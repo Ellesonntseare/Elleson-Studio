@@ -482,5 +482,17 @@
   {
     "text": "Timeline refinement · Stable all-scene asset rows, same-row splits, left/right trim, direct mouse drag and per-character text entry",
     "done": true
+  },
+  {
+    "text": "Timeline · Magnet snapping, scene transfers and marked-range trimming",
+    "done": true
+  },
+  {
+    "text": "Animation · Repeat, Slow or Hold on clip extension",
+    "done": true
+  },
+  {
+    "text": "Learning · Shorter labels and optional hover help throughout the app",
+    "done": true
   }
 ]
