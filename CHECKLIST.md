@@ -9,7 +9,7 @@ Source interaction tests pass for the selected eight animation improvements, sce
 - [x] Verify the final packaged app and export
 - [x] Back up user projects and update installed Studio
 - [x] Verify saved-project compatibility and reopen Studio
-- [ ] Push tested source to GitHub
+- [x] Push tested source to GitHub
 
 ## Requested features: 34/34 feature-tested
 
