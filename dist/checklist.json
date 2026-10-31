@@ -494,5 +494,185 @@
   {
     "text": "Learning · Shorter labels and optional hover help throughout the app",
     "done": true
+  },
+  {
+    "text": "Voice update · Real 2,233-character narration, continuous scene audio and save/reopen verified in the installed app",
+    "done": true
+  },
+  {
+    "text": "Narration fixes 1 · Preserve voice-over drafts",
+    "done": true
+  },
+  {
+    "text": "Narration fixes 2 · Short voice samples",
+    "done": true
+  },
+  {
+    "text": "Narration fixes 3 · Replace edited narration sections",
+    "done": true
+  },
+  {
+    "text": "Narration fixes 4 · Connected narration timeline edits",
+    "done": true
+  },
+  {
+    "text": "Narration fixes 5 · Continue visuals with long narration",
+    "done": true
+  },
+  {
+    "text": "Narration fixes 6 · Preserve lip-sync through audio edits",
+    "done": true
+  },
+  {
+    "text": "Narration fixes 7 · Match generated voice loudness",
+    "done": true
+  },
+  {
+    "text": "Narration fixes 8 · Resume interrupted generation",
+    "done": true
+  },
+  {
+    "text": "Narration fixes 10 · Check capacity before generation",
+    "done": true
+  },
+  {
+    "text": "Current animation 1 · Faster local voices",
+    "done": true
+  },
+  {
+    "text": "Current animation 2 · Adjust visuals after voice edits",
+    "done": true
+  },
+  {
+    "text": "Current animation 3 · Natural walking starts/stops",
+    "done": true
+  },
+  {
+    "text": "Current animation 4 · Foot-slide detection and correction",
+    "done": true
+  },
+  {
+    "text": "Current animation 5 · Smooth supplied-picture turns",
+    "done": true
+  },
+  {
+    "text": "Current animation 6 · Replace artwork keeping animation",
+    "done": true
+  },
+  {
+    "text": "Current animation 7 · Editable speech-driven gestures",
+    "done": true
+  },
+  {
+    "text": "Current animation 8 · Direct hand-to-object contact",
+    "done": true
+  },
+  {
+    "text": "Current animation 9 · Larger centre preview",
+    "done": true
+  },
+  {
+    "text": "Current animation 10 · Scene-edge trimming and crosshair",
+    "done": true
+  },
+  {
+    "text": "Current animation 11 · Clear audio waveforms",
+    "done": true
+  },
+  {
+    "text": "Current animation 12 · Continuous walking into next scene",
+    "done": true
+  },
+  {
+    "text": "Current animation 13 · Simple English and accessible scene continuation",
+    "done": true
+  },
+  {
+    "text": "Local AI · Selected-character instructions in the current project",
+    "done": true
+  },
+  {
+    "text": "Local AI · Click destinations across scenes",
+    "done": true
+  },
+  {
+    "text": "Local AI · Local model and validated editable action plans",
+    "done": true
+  },
+  {
+    "text": "Local AI · Preview, apply and undo",
+    "done": true
+  },
+  {
+    "text": "Director mode · Direct several selected project items",
+    "done": true
+  },
+  {
+    "text": "Director mode · Emotion and movement strength",
+    "done": true
+  },
+  {
+    "text": "Director mode · Draw a walking route",
+    "done": true
+  },
+  {
+    "text": "Director mode · Directions at exact timeline times",
+    "done": true
+  },
+  {
+    "text": "Director mode · Listening reactions",
+    "done": true
+  },
+  {
+    "text": "Director mode · Adjust part of an existing action",
+    "done": true
+  },
+  {
+    "text": "Director mode · Carry objects through continued scenes",
+    "done": true
+  },
+  {
+    "text": "Director mode · Dialogue pauses and immediate replies",
+    "done": true
+  },
+  {
+    "text": "Director mode · Object pickup, carry, handover and release",
+    "done": true
+  },
+  {
+    "text": "Director mode · Saved acting styles for any asset",
+    "done": true
+  },
+  {
+    "text": "Director mode · Reviewed performance choices",
+    "done": true
+  },
+  {
+    "text": "Director mode · Local microphone instructions",
+    "done": true
+  },
+  {
+    "text": "Director mode · Plain explanations for unsupported actions",
+    "done": true
+  },
+  {
+    "text": "Current delivery · Actual local model verification and inference",
+    "done": true
+  },
+  {
+    "text": "Current delivery · Packaged-app and HD export verification",
+    "done": true
+  },
+  {
+    "text": "Current delivery · Back up and update installed Studio",
+    "done": true
+  },
+  {
+    "text": "Current delivery · Verify saved projects after update",
+    "done": true
+  },
+  {
+    "text": "Current delivery · Push tested source to GitHub",
+    "done": false
   }
 ]

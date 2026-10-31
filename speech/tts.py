@@ -34,10 +34,12 @@ def prepare_speech_text(text, pronunciations):
     return text
 
 
-def main():
+engine_cache = {}
+
+def main(request_path=None, output_path=None):
     all_config = json.loads((root / "config.json").read_text(encoding="utf-8"))
     config = all_config["tts"]
-    request = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+    request = json.loads(Path(request_path or sys.argv[1]).read_text(encoding="utf-8"))
     text = request.get("text", "").strip()
     if not text or len(text) > 2000:
         raise ValueError("Enter between 1 and 2000 characters of dialogue.")
@@ -65,8 +67,10 @@ def main():
         options.inter_op_num_threads = 1
         options.log_severity_level = 3
         model = all_config["kokoro"]
-        session = ort.InferenceSession(str(root / model["model"]), sess_options=options, providers=["CPUExecutionProvider"])
-        engine = Kokoro.from_session(session, str(root / model["styles"]))
+        if "kokoro" not in engine_cache:
+            session = ort.InferenceSession(str(root / model["model"]), sess_options=options, providers=["CPUExecutionProvider"])
+            engine_cache["kokoro"] = Kokoro.from_session(session, str(root / model["styles"]))
+        engine = engine_cache["kokoro"]
         audio, sample_rate = engine.create(text, voice=selected["speaker"], speed=speed, lang=selected.get("language", "en-us"), sentence_pause=sentence_pause, clause_pause=clause_pause)
         if len(audio) / sample_rate > 60:
             raise ValueError("This line exceeds 60 seconds. Split the text into shorter turns.")
@@ -76,7 +80,7 @@ def main():
         if peak > .98:
             audio = audio * (.98 / peak)
         pcm = (np.clip(audio, -1, 1) * 32767).astype("<i2").tobytes()
-        with wave.open(sys.argv[2], "wb") as output:
+        with wave.open(output_path or sys.argv[2], "wb") as output:
             output.setnchannels(1)
             output.setsampwidth(2)
             output.setframerate(sample_rate)
@@ -84,10 +88,12 @@ def main():
         print(json.dumps({"duration": len(audio) / sample_rate, "sampleRate": sample_rate, "voice": selected["id"], "engine": "kokoro", "delivery": delivery}))
         return
     from piper import PiperVoice, SynthesisConfig
-    voice = PiperVoice.load(str(root / config["model"]), use_cuda=False)
+    if "piper" not in engine_cache:
+        engine_cache["piper"] = PiperVoice.load(str(root / config["model"]), use_cuda=False)
+    voice = engine_cache["piper"]
     synthesis = SynthesisConfig(speaker_id=selected["speaker"], length_scale=1 / speed, normalize_audio=True)
     frames = 0
-    with wave.open(sys.argv[2], "wb") as output:
+    with wave.open(output_path or sys.argv[2], "wb") as output:
         output.setnchannels(1)
         output.setsampwidth(2)
         output.setframerate(voice.config.sample_rate)
@@ -106,6 +112,15 @@ def main():
     print(json.dumps({"duration": frames / voice.config.sample_rate, "sampleRate": voice.config.sample_rate, "voice": selected["id"]}))
 
 if __name__ == "__main__":
+    if "--worker" in sys.argv:
+        for raw in sys.stdin:
+            try:
+                job = json.loads(raw)
+                main(job["input"], job["output"])
+                print("ELLESON_RESULT " + json.dumps({"id": job["id"], "ok": True}), flush=True)
+            except Exception as error:
+                print("ELLESON_RESULT " + json.dumps({"id": job.get("id"), "ok": False, "error": str(error)}), flush=True)
+        sys.exit(0)
     try:
         main()
     except Exception as error:

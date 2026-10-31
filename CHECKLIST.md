@@ -1,5 +1,16 @@
 # Elleson Studio — progress checklist
 
+## Current update — 1 November 2026
+
+Source interaction tests pass for the selected eight animation improvements, scene-edge dragging, crosshair trims, audio waveforms, preview layout, carried-object walking continuity, and the selected Director controls for characters and ordinary assets. Source local Michael/Emma speech and audible 1920×1080 MP4 pass. Desktop synthetic-microphone transcription and saved-style reload pass. Real Qwen3 4B commands pass walking/waving in order, simultaneous named actors, rotating an object and a single dialogue reply. Source desktop real AI review, preview, continuous scene crossing, Apply and Undo pass. This batch is installed and reopened. The installed local microphone, model availability, saved-style reload and audible 1920×1080 MP4 pass. All 110 existing profile files were backed up and remained unchanged during installation. The current workspace and two saved projects retain identical content; normal last-used timestamps can change when an app opens.
+
+- [x] Repair the local model and verify its official SHA256
+- [x] Test actual local AI inference and reviewed application
+- [x] Verify the final packaged app and export
+- [x] Back up user projects and update installed Studio
+- [x] Verify saved-project compatibility and reopen Studio
+- [ ] Push tested source to GitHub
+
 ## Requested features: 34/34 feature-tested
 
 - [x] Animation ease · Guided picture-rig setup
@@ -77,7 +88,30 @@
 
 ## New scene and walking requests
 
-- [ ] Copy/duplicate scenes next to each other from the bottom strip
-- [ ] Continue backgrounds and ending poses across scenes
-- [ ] Correct knee and foot matching during walking
-- [ ] Set longer walks across continued scenes
+- [x] Copy/duplicate scenes next to each other from the bottom strip
+- [x] Continue backgrounds and ending poses across scenes
+- [x] Correct knee and foot matching during walking
+- [x] Set longer walks across continued scenes
+
+## Installed long narration verification — 31 October 2026
+
+- [x] Generate a real 2,233-character local narrator script (2 min 9 sec)
+- [x] Preserve all audio samples across four scenes
+- [x] Save/reopen narration and edit the complete script from a continuation
+- [x] Verify cancellation, Unicode, cached previews and locked-clip protection
+- [x] Restore the live browser preview
+
+## Narration fixes — 31 October 2026
+
+- [x] 1 · Voice script/settings drafts survive closing and restarting
+- [x] 2 · Short sample capped at 15 seconds before full generation
+- [x] 3 · Edit and replace one narration section; unchanged sections reuse saved audio
+- [x] 4 · Connected narration move/delete/copy/trim/speed and independent copied groups
+- [x] 5 · Continue the environment and ending character poses into new narration scenes
+- [x] 6 · Source-based mouth timing survives splits, trims, speed changes and scene crossings
+- [x] 7 · Consistent active speech level with peak protection
+- [x] 8 · Completed audio sections persist for interrupted-job recovery
+- [x] 10 · Capacity estimate before generation and explicit audio-only mode
+- [x] Back up existing Studio data, apply and verify the installed update
+
+Number 9 (resizing/rearranging the Voice-over panel) was excluded by the user.

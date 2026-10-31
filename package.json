@@ -35,7 +35,11 @@
       "server-api.cjs",
       "package.json",
       "desktop/frame-export.cjs",
-      "elevenlabs-api.cjs"
+      "elevenlabs-api.cjs",
+      "director-api.cjs",
+      "!dist/ai-setup-progress.json",
+      "!dist/work-progress.json",
+      "!dist/ai-download-progress.html"
     ],
     "extraResources": [
       {

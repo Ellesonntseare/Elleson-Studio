@@ -1,5 +1,15 @@
 # Elleson Studio 0.5.0
 
+## Local Director and animation update — 1 November 2026
+
+Select any character, text layer or object and choose **Direct selected item**. Write what should happen, choose a point (including another scene) or draw a route, then choose **Make a plan**. Review the proposed actions, preview them and choose **Apply**. Undo restores the previous project. The local AI proposes supported editor actions. Existing artwork and rig joints determine which body movements are possible.
+
+Director supports named items together, exact start times, movement strength, saved per-item styles, listener reactions, reachable object interactions and immediate dialogue replies. Replies follow existing audio and prepare editable new dialogue; generate its voice after reviewing the text. Speak direction records at most 60 seconds and transcribes locally before planning. Performance choices change motion pace and strength. A selected range of an existing single-scene action can be sped up or slowed down while preserving the surrounding movement.
+
+The official Qwen3 4B Q4_K_M model and llama.cpp CPU runtime live outside the repository and app archive, under `%LOCALAPPDATA%/Elleson Studio/AI`. Run `node speech/setup-director.cjs` for resumable setup; it verifies model and runtime SHA256 values and saves their licenses and source records. The model is 2,497,280,256 bytes (about 2.33 GiB), with additional runtime and memory requirements. Inference runs on the PC; the measured checks took about 20–82 seconds per instruction on this CPU. New computers need this separate model setup.
+
+Scene edges support dragging from either side, with a selectable trim point on the scene bar. Keep scene going carries ending positions, walking phase and held objects forward. Audio waveforms show the actual sound. Focus and panel controls give the central preview more room. Animation improvements include natural walk starts/stops, reviewed foot-slide correction, supplied-view blending, rig-preserving artwork replacement, editable audio-accent gestures and direct grip adjustment. Voice edits offer reviewed visual/caption/camera retiming, and local speech reuses a warm worker.
+
 ## Voice-over update — 30 October 2026
 
 The toolbar Voice-over button opens narrator generation directly. Longer scripts are generated in sentence-aware sections, previewed/downloaded as one WAV, and placed continuously across scenes. Text is no longer cut off at 2,000 characters in the interface. Project scene/audio capacity and available memory still apply. Stop after this section cancels before changing the project.

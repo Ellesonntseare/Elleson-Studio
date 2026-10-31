@@ -16,8 +16,8 @@ app.whenReady().then(()=>{
  protocol.handle('elleson',async request=>{const u=new URL(request.url);if(u.host!=='studio')return new Response('Forbidden',{status:403});
   if(u.pathname.startsWith('/api/')){try{const bytes=Buffer.from(await request.arrayBuffer());if(bytes.length>150*1024*1024)return new Response('File too large',{status:413});const req=Readable.from(bytes.length?[bytes]:[]);req.method=request.method;req.headers={host:'127.0.0.1:4317'};let status=200,headers={},body;const res={headersSent:false,writeHead(code,fields){status=code;headers=fields;this.headersSent=true},end(value){body=value}};await localAPI(req,res,u);return new Response(body,{status,headers})}catch{return new Response(JSON.stringify({error:'Local processing failed.'}),{status:500,headers:{'Content-Type':'application/json'}})}}
   let p;try{p=decodeURIComponent(u.pathname)}catch{return new Response('Bad request',{status:400})}if(app.isPackaged&&p==='/checklist.json')return net.fetch(pathToFileURL(path.join(process.resourcesPath,'checklist.json')).href);const file=path.resolve(root,'.'+(p==='/'?'/index.html':p));if(!file.startsWith(root+path.sep))return new Response('Forbidden',{status:403});return net.fetch(pathToFileURL(file).href)});
- session.defaultSession.setPermissionRequestHandler((_web,_permission,callback)=>callback(false));
- session.defaultSession.setPermissionCheckHandler(()=>false);
+ session.defaultSession.setPermissionRequestHandler((web,permission,callback,details)=>callback(web===win?.webContents&&permission==='media'&&details.mediaTypes?.length>0&&details.mediaTypes.every(type=>type==='audio')&&web.getURL().startsWith('elleson://studio/')));
+ session.defaultSession.setPermissionCheckHandler((web,permission,origin,details)=>web===win?.webContents&&permission==='media'&&details.mediaType==='audio'&&details.isMainFrame&&origin.startsWith('elleson://studio'));
  win=new BrowserWindow({width:1520,height:1000,minWidth:1024,minHeight:720,backgroundColor:'#101115',title:'Elleson Studio',icon:path.join(__dirname,'assets','studio.ico'),show:false,autoHideMenuBar:true,webPreferences:{preload:path.join(__dirname,'preload.cjs'),contextIsolation:true,nodeIntegration:false,sandbox:true,webSecurity:true,backgroundThrottling:false}});
  require('./frame-export.cjs')({app,ipcMain,dialog,win,trusted,runEncoder,exportFolders,isBusy:()=>exportBusy,setBusy:value=>exportBusy=value});
  win.webContents.setWindowOpenHandler(()=>({action:'deny'}));
@@ -30,3 +30,7 @@ app.whenReady().then(()=>{
  ipcMain.handle('studio:mp4',async(event,bytes)=>{trusted(event);if(exportBusy)throw Error('An export is already running');if(!(bytes instanceof Uint8Array)||bytes.byteLength>1024*1024*1024||bytes.byteLength<4)throw Error('Invalid video');exportBusy=true;let temp;try{const result=await dialog.showSaveDialog(win,{defaultPath:path.join(app.getPath('videos'),'elleson-animation.mp4'),filters:[{name:'MP4 video',extensions:['mp4']}]});if(result.canceled)return{canceled:true};temp=await fs.mkdtemp(path.join(os.tmpdir(),'elleson-export-'));const input=path.join(temp,'input.webm'),output=path.join(temp,'output.mp4');await fs.writeFile(input,bytes);await runEncoder(['-hide_banner','-y','-i',input,'-c:v','libx264','-pix_fmt','yuv420p','-crf','20','-preset','fast','-c:a','aac','-b:a','192k','-movflags','+faststart',output]);await fs.copyFile(output,result.filePath);return{path:result.filePath}}finally{exportBusy=false;if(temp)await fs.rm(temp,{recursive:true,force:true})}});
 });
 app.on('window-all-closed',()=>app.quit());
+
+app.on('before-quit',()=>require('../server-api.cjs').closeSpeechWorkers());
+
+app.on('before-quit',()=>require('../director-api.cjs').closeDirectorEngines());

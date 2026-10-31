@@ -36,3 +36,6 @@ CURRENT-WORK.md
 CONTINUE-IN-CODEX.md
 DELIVERY-STATE.md
 WORK-CHECKLIST.md
+
+dist/ai-setup-progress.json
+dist/work-progress.json
