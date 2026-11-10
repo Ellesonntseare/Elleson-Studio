@@ -1,0 +1,9 @@
+# Active progress
+
+Current source: original selected improvements 1–8 implemented and feature-tested. Added scene right-edge length; left-edge and crosshair trims; preview space; real waveforms; plain labels; walking between continued scenes. Tests warm-voice.cjs, animation-refinements.cjs, continuity-refinements.cjs, scene-trim-preview.cjs PASS. Need final actual mouse-drag and native/regression tests, then safe staged install. Current installed app is previous nine narration-fixes batch, not these changes.
+
+NEW requested AI: user wants tap selected character and tell it an action, click target point even on scene2; operate on current project. Local/free preferred. No AI functionality implemented yet; Ollama Qwen3-4B proposed (2.5GB download), need discover installed local runtime first and integrate structured validated action planning. Preserve all prior work and finish it. No subagents. AI local-only, no sending scripts/media to online providers. Existing real user app/profile remain untouched for this batch.
+
+New request: Talk after another character with zero/optional gap. Implemented dialogue-after.js; tests pending. AI current-project selected-character controls still pending. No Ollama installed or service running. Ollama Windows zip is 1.6GB; investigating lighter llama.cpp CPU runner plus official Qwen3-4B-Q4_K_M.gguf. No model downloaded yet.
+
+User explicitly requires: finish ALL work first, then commit/push recent updates to origin main (https://github.com/Ellesonntseare/Elleson-Studio.git). No commit or push done. Latest base e5a18ce. Do not add unrelated untracked root migration/publish helper scripts. Only report lists of unfinished items; no completed progress narration. Download CPU runtime ZIP verified; model partial failed some Range HTTP403, needs fresh signed URL/range retry, resume existing 128KiB parts. Existing model parts about12.5% at latest check.

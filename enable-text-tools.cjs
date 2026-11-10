@@ -1,0 +1,1 @@
+const fs=require('node:fs'),p=__dirname+'/dist/index.html';let s=fs.readFileSync(p,'utf8');s=s.replace('<script src="animation.js"></script>','<script src="animation.js"></script><script src="text-tools.js"></script>');fs.writeFileSync(p,s);

@@ -1,0 +1,16 @@
+const fs=require('node:fs'),f='dist/explainer-assets.js';let s=fs.readFileSync(f,'utf8');const replace=(from,to)=>{if(!s.includes(from))throw Error('Missing renderer anchor '+from.slice(0,50));s=s.replace(from,to)};
+replace("phase=settings.details?seconds*(settings.speed||1):0,w=", "parts=settings.partPose||{},get=(id,fallback)=>parts[id]??fallback,phase=settings.details?seconds*(settings.speed||1):0,w=");
+replace("height*.14*growth", "height*.14*get('screenProgress',growth)");
+replace("case'laptop':box(36,48,168,119,P,14);screen(45,58,150,97);", "case'laptop':c.save();c.translate(120,167);c.scale(1,Math.max(.02,get('lidOpen',1)));c.translate(-120,-167);box(36,48,168,119,P,14);screen(45,58,150,97);c.restore();");
+replace("box(-35,-39+w*3,72,57,W,13);", "c.save();c.translate(get('messageX',0),get('messageY',w*3));c.scale(get('messageScale',1),get('messageScale',1));box(-35,-39,72,57,W,13);");
+replace("line(-22,-9,10,-9,A,5);ellipse(0,66", "line(-22,-9,10,-9,A,5);c.restore();ellipse(0,66");
+replace("const h=(n+1)*27*growth;", "const h=Math.max(.1,(n+1)*27*get('bar'+(n+1),growth));");
+replace("const y=192-n*21-(stack===2&&n===count-1?w*6:0);", "const y=192-n*21-(stack===2&&n===count-1?w*6:0)+get('stack'+(stack+1)+'Y',0);");
+replace("for(let n=0;n<3;n++){const x=35+n*4,y=163-n*47+(n===2?w*3:0),width=169-n*8,color=", "for(let n=0;n<3;n++){c.save();if(n===2){c.translate(120+get('bookX',0),69+get('bookY',0));c.rotate(get('bookAngle',0)*Math.PI/180);c.translate(-120,-69)}const x=35+n*4,y=163-n*47+(n===2?w*3:0),width=169-n*8,color=");
+replace("box(x,y,13,41,color,4)}break;", "box(x,y,13,41,color,4);c.restore()}break;");
+replace("phase*.3,()=>{line(0,0,0,-49,A,7);line(0,0,34,15,D,8)});move(120,120,phase*1.4,()=>line(0,10,0,-59,R,2))", "get('minuteAngle',phase*.3*180/Math.PI)*Math.PI/180,()=>line(0,0,0,-49,A,7));move(120,120,get('hourAngle',phase*.3*180/Math.PI)*Math.PI/180,()=>line(0,0,34,15,D,8));move(120,120,get('secondAngle',phase*1.4*180/Math.PI)*Math.PI/180,()=>line(0,10,0,-59,R,2))");
+replace("case'gear':move(120,120,phase*.45,", "case'gear':move(120,120,get('gearAngle',phase*.45*180/Math.PI)*Math.PI/180,");
+replace("c.globalAlpha=opacity*.4;for(let n=0;n<3", "c.globalAlpha=opacity*.4*get('steamOpacity',1);for(let n=0;n<3");
+replace("move(120,120,w*.04,", "move(120,120,get('leafAngle',w*.04*180/Math.PI)*Math.PI/180,");
+for(const from of ['39-w*10','61-w*10','77-w*10','93-w*10'])s=s.replaceAll(from,from.split('-')[0]+"+get('letterY',-w*10)");
+fs.writeFileSync(f,s);

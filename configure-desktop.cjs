@@ -1,0 +1,10 @@
+const fs=require('node:fs');
+const p=JSON.parse(fs.readFileSync(__dirname+'/package.json','utf8'));
+p.version='0.2.0';p.description='Elleson Studio desktop animation editor';p.main='desktop/main.cjs';p.author='Elleson Studio';p.license='UNLICENSED';p.private=true;
+p.scripts={start:'electron .',preview:'node preview.cjs',test:'node tests/integration.cjs',pack:'electron-builder --win --dir',build:'electron-builder --win nsis --x64'};
+p.build={appId:'studio.elleson.editor',productName:'Elleson Studio',directories:{output:'release'},files:['dist/**/*','desktop/main.cjs','desktop/preload.cjs','package.json'],extraResources:[{from:'desktop/tools/ffmpeg.exe',to:'tools/ffmpeg.exe'},{from:'desktop/tools/FFMPEG-NOTICE.md',to:'tools/FFMPEG-NOTICE.md'}],win:{target:'nsis',signAndEditExecutable:false},nsis:{oneClick:false,perMachine:false,allowToChangeInstallationDirectory:true,createDesktopShortcut:true,createStartMenuShortcut:true,artifactName:'Elleson-Studio-Setup-${version}.${ext}'}};
+fs.writeFileSync(__dirname+'/package.json',JSON.stringify(p,null,2));
+let s=fs.readFileSync(__dirname+'/dist/studio.js','utf8');
+s=s.replace("const format=$('videoFormat').value,types=format==='mp4'?", "const format=$('videoFormat').value,desktopMp4=format==='mp4'&&!!window.studioDesktop?.exportMp4,types=format==='mp4'&&!desktopMp4?");
+s=s.replace("download(new Blob(chunks,{type:mime}),'elleson-animation.'+format);toast('Video exported at '+w+' × '+w*9/16+'.')", "const video=new Blob(chunks,{type:mime});if(desktopMp4){toast('Encoding MP4…');const result=await window.studioDesktop.exportMp4(await video.arrayBuffer());toast(result.canceled?'Export canceled.':'MP4 saved at '+w+' × '+w*9/16+'.')}else{await download(video,'elleson-animation.'+format);toast('Video exported at '+w+' × '+w*9/16+'.')}");
+fs.writeFileSync(__dirname+'/dist/studio.js',s);

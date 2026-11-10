@@ -1,0 +1,1 @@
+const fs=require('node:fs');const dir=__dirname+'/dist/';let s=fs.readFileSync(dir+'index.html','utf8').replace('<script src="timeline.js"></script>','<script src="timeline.js"></script><script src="desktop.js"></script>');fs.writeFileSync(dir+'index.html',s);fs.writeFileSync(dir+'revision.json',JSON.stringify({revision:Date.now()}));
